@@ -2,7 +2,7 @@
     "name": "svntmr/brain-games",
     "bin": ["bin/brain-games"],
     "description": "First Hexlet project named Brain Games",
-    "type": "project",
+    "type": "library",
     "authors": [
         {
             "name": "svn.tmr",
