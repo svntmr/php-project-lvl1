@@ -13,5 +13,8 @@
             "email": "svn.tmr@bk.ru"
         }
     ],
+    "autoload": {
+        "files": ["src/Cli.php"],
+    },
     "minimum-stability": "dev"
 }
