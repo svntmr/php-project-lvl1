@@ -2,19 +2,16 @@
 
 namespace BrainGames\games\even;
 
-use function cli\line;
-use function cli\prompt;
+use function cli\{line, prompt};
+use function BrainGames\Cli\{welcome, bue, congratulationsTo};
+
+const ROUNDS = 3;
 
 function run()
 {
-    line('Welcome to the Brain Games!');
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    line();
-    $name = prompt('May I have your name? ');
-    line("Hello, %s!", $name);
-    line();
+    $name = welcome('Answer "yes" if the number is even, otherwise answer "no".');
     $counter = 0;
-    while ($counter < 3) {
+    while ($counter < ROUNDS) {
         $number = rand(0, 50);
         line("Question: {$number}");
         $check = prompt("Your answer");
@@ -24,8 +21,8 @@ function run()
         }
         $counter++;
     }
-    if ($counter === 3) {
-        line("Congratulations, {$name}!");
+    if ($counter === ROUNDS) {
+        congratulationsTo($name);
     }
 }
 
@@ -35,8 +32,7 @@ function checkIfNumberEven(int $number, string $answer, string $name)
     $authorizedAnswers = ['yes', 'no'];
     $isEven = $number % 2 === 0 ? 'yes' : 'no';
     if (! in_array($answer, $authorizedAnswers) or $answer !== $isEven) {
-        line("'{$answer}' is wrong answer ;(. Correct answer was '{$isEven}'.");
-        line("Let's try again, {$name}!");
+        bue($answer, $isEven, $name);
         $result = false;
     } else {
         line('Correct!');
