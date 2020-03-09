@@ -17,7 +17,7 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php",
+            "src/engine.php",
             "src/games/even.php",
             "src/games/calc.php"
         ]
