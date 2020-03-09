@@ -4,5 +4,8 @@
 **TODO**   
 * Add Normal Description   
 ## Brain Even
-How to install and run globally
+How to install globally and run
 [![asciicast](https://asciinema.org/a/tUw9Zd1HfIm7KqhIVhOP1INf2.svg)](https://asciinema.org/a/tUw9Zd1HfIm7KqhIVhOP1INf2)
+## Brain Calc
+How to install globally and run
+[![asciicast](https://asciinema.org/a/gFwhFKUQdczmXtZQFbqd43cAN.svg)](https://asciinema.org/a/gFwhFKUQdczmXtZQFbqd43cAN)
