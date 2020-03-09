@@ -3,30 +3,24 @@
 namespace BrainGames\games\calc;
 
 use function cli\{line, prompt};
-use function BrainGames\Cli\{welcome, bue, congratulationsTo};
+use function BrainGames\engine\{runGame, welcome, bue, congratulationsTo};
 
-use const BrainGames\Cli\ROUNDS;
+use const BrainGames\engine\ROUNDS;
 
 const MATH_SIGNS = ['+', '-', '*'];
 
 function run()
 {
-    $name = welcome('What is the result of the expression?');
-    $counter = 0;
-    while ($counter < ROUNDS) {
+    $gameDescription = 'What is the result of the expression?';
+    $gameLogic = function () {
+        $logic = [];
         $parameters = generateQuestion();
         $question = implode(' ', $parameters);
-        line("Question: {$question}");
-        $check = prompt("Your answer");
-        $return = checkCalculation($parameters, $check, $name);
-        if (! $return) {
-            break;
-        }
-        $counter++;
-    }
-    if ($counter === ROUNDS) {
-        congratulationsTo($name);
-    }
+        $logic['question'] = $question;
+        $logic['correctAnswer'] = calculate($parameters);
+        return $logic;
+    };
+    runGame($gameDescription, $gameLogic);
 }
 
 function generateQuestion()
@@ -35,19 +29,6 @@ function generateQuestion()
     $secondNumber = rand(1, 50);
     $randomMathSign = MATH_SIGNS[array_rand(MATH_SIGNS)];
     return [$firstNumber, $randomMathSign, $secondNumber];
-}
-
-function checkCalculation(array $expression, string $answer, string $name)
-{
-    $result = true;
-    $rightAnswer = (string) calculate($expression);
-    if ($answer !== $rightAnswer) {
-        bue($answer, $rightAnswer, $name);
-        $result = false;
-    } else {
-        line('Correct!');
-    }
-    return $result;
 }
 
 function calculate(array $parameters)
