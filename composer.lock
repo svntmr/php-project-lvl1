@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "50ef157748a72f4fef9027e2570fb8ce",
+    "content-hash": "28608c06cb9e81a3c64000385994b2cd",
     "packages": [
         {
             "name": "wp-cli/php-cli-tools",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "daa440f9150bba17353c2ddfbdb7d04b37ae1ed5"
+                "reference": "c6fe9362cd4d83fbe0f747367609051ab5828f59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/daa440f9150bba17353c2ddfbdb7d04b37ae1ed5",
-                "reference": "daa440f9150bba17353c2ddfbdb7d04b37ae1ed5",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/c6fe9362cd4d83fbe0f747367609051ab5828f59",
+                "reference": "c6fe9362cd4d83fbe0f747367609051ab5828f59",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-02-26T04:58:49+00:00"
+            "time": "2020-03-08T23:57:44+00:00"
         }
     ],
     "aliases": [],
