@@ -13,7 +13,7 @@ function runGame(string $gameDescription, callable $gameLogic)
         ['question' => $question, 'correctAnswer' => $correctAnswer] = $gameLogic();
         line("Question: {$question}");
         $answer = prompt("Your answer");
-        if ($answer === $correctAnswer) {
+        if ($answer == $correctAnswer) {
             line('Correct!');
         } else {
             bue($answer, $correctAnswer, $name);
