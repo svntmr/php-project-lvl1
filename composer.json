@@ -1,6 +1,6 @@
 {
     "name": "svntmr/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": ["bin/brain-even"],
     "description": "First Hexlet project named Brain Games",
     "type": "library",
     "authors": [
