@@ -29,9 +29,8 @@ function run()
 function checkIfNumberEven(int $number, string $answer, string $name)
 {
     $result = true;
-    $authorizedAnswers = ['yes', 'no'];
     $isEven = $number % 2 === 0 ? 'yes' : 'no';
-    if (! in_array($answer, $authorizedAnswers) or $answer !== $isEven) {
+    if ($answer !== $isEven) {
         bue($answer, $isEven, $name);
         $result = false;
     } else {
