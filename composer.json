@@ -1,6 +1,9 @@
 {
     "name": "svntmr/brain-games",
-    "bin": ["bin/brain-even"],
+    "bin": [
+        "bin/brain-even",
+        "bin/brain-calc"
+    ],
     "description": "First Hexlet project named Brain Games",
     "type": "library",
     "authors": [
@@ -13,7 +16,11 @@
         "phpcs": "phpcs"
     },
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/games/even.php",
+            "src/games/calc.php"
+        ]
     },
     "minimum-stability": "dev",
     "require": {
