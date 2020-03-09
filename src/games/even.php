@@ -5,7 +5,7 @@ namespace BrainGames\games\even;
 use function cli\{line, prompt};
 use function BrainGames\Cli\{welcome, bue, congratulationsTo};
 
-const ROUNDS = 3;
+use const BrainGames\Cli\ROUNDS;
 
 function run()
 {
