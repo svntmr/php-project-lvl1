@@ -2,10 +2,7 @@
 
 namespace BrainGames\games\calc;
 
-use function cli\{line, prompt};
-use function BrainGames\engine\{runGame, welcome, bue, congratulationsTo};
-
-use const BrainGames\engine\ROUNDS;
+use function BrainGames\engine\runGame;
 
 const MATH_SIGNS = ['+', '-', '*'];
 
