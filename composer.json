@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "description": "First Hexlet project named Brain Games",
     "type": "library",
@@ -21,7 +22,8 @@
             "src/engine.php",
             "src/games/even.php",
             "src/games/calc.php",
-            "src/games/divisor.php"
+            "src/games/divisor.php",
+            "src/games/progression.php"
         ]
     },
     "minimum-stability": "dev",
