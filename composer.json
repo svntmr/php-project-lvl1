@@ -2,7 +2,8 @@
     "name": "svntmr/brain-games",
     "bin": [
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-divisor"
     ],
     "description": "First Hexlet project named Brain Games",
     "type": "library",
@@ -19,7 +20,8 @@
         "files": [
             "src/engine.php",
             "src/games/even.php",
-            "src/games/calc.php"
+            "src/games/calc.php",
+            "src/games/divisor.php"
         ]
     },
     "minimum-stability": "dev",
