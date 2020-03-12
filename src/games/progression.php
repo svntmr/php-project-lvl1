@@ -29,4 +29,3 @@ function createProgressionArray()
 
     return [$removedElement, $numbersArray];
 }
-
