@@ -9,3 +9,6 @@ How to install globally and run
 ## Brain Calc
 How to install globally and run
 [![asciicast](https://asciinema.org/a/gFwhFKUQdczmXtZQFbqd43cAN.svg)](https://asciinema.org/a/gFwhFKUQdczmXtZQFbqd43cAN)
+## Brain GDC
+How to install globally and run
+[![asciicast](https://asciinema.org/a/8YcplJpcsiU0aJnpdbe8sCD3O.svg)](https://asciinema.org/a/8YcplJpcsiU0aJnpdbe8sCD3O)
