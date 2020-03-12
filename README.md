@@ -12,3 +12,6 @@ How to install globally and run
 ## Brain GDC
 How to install globally and run
 [![asciicast](https://asciinema.org/a/8YcplJpcsiU0aJnpdbe8sCD3O.svg)](https://asciinema.org/a/8YcplJpcsiU0aJnpdbe8sCD3O)
+## Brain Progression
+How to install globally and run
+[![asciicast](https://asciinema.org/a/Ni19LxanYMrBcOvUVWVEaZHP8.svg)](https://asciinema.org/a/Ni19LxanYMrBcOvUVWVEaZHP8)
