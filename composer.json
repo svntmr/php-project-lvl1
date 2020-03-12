@@ -3,7 +3,7 @@
     "bin": [
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-divisor"
+        "bin/brain-gcd"
     ],
     "description": "First Hexlet project named Brain Games",
     "type": "library",
