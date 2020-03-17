@@ -7,14 +7,14 @@ use function BrainGames\engine\runGame;
 function run()
 {
     $gameDescription = 'What number is missing in the progression?';
-    $gameLogic = function () {
+    $getGameData = function () {
         $logic = [];
         [$removedElement, $numbersArray] = createProgressionArray();
         $logic['question'] = implode(' ', $numbersArray);
         $logic['correctAnswer'] = $removedElement;
         return $logic;
     };
-    runGame($gameDescription, $gameLogic);
+    runGame($gameDescription, $getGameData);
 }
 
 function createProgressionArray()

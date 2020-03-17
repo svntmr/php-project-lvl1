@@ -9,7 +9,7 @@ const MATH_SIGNS = ['+', '-', '*'];
 function run()
 {
     $gameDescription = 'What is the result of the expression?';
-    $gameLogic = function () {
+    $getGameData = function () {
         $logic = [];
         $parameters = generateQuestion();
         $question = implode(' ', $parameters);
@@ -17,7 +17,7 @@ function run()
         $logic['correctAnswer'] = calculate($parameters);
         return $logic;
     };
-    runGame($gameDescription, $gameLogic);
+    runGame($gameDescription, $getGameData);
 }
 
 function generateQuestion()

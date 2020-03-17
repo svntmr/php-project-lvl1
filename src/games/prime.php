@@ -16,14 +16,14 @@ const PRIME_NUMBERS = [
 function run()
 {
     $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $gameLogic = function () {
+    $getGameData = function () {
         $logic = [];
         $number = rand(0, 500);
         $logic['question'] = $number;
         $logic['correctAnswer'] = checkIfNumberPrime($number);
         return $logic;
     };
-    runGame($gameDescription, $gameLogic);
+    runGame($gameDescription, $getGameData);
 }
 
 function checkIfNumberPrime(int $number)

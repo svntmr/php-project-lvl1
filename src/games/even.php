@@ -7,14 +7,14 @@ use function BrainGames\engine\runGame;
 function run()
 {
     $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $gameLogic = function () {
+    $getGameData = function () {
         $logic = [];
         $number = rand(1, 50);
         $logic['question'] = $number;
         $logic['correctAnswer'] = checkIfNumberEven($number);
         return $logic;
     };
-    runGame($gameDescription, $gameLogic);
+    runGame($gameDescription, $getGameData);
 }
 
 function checkIfNumberEven(int $number)

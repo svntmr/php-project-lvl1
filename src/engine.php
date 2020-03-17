@@ -6,11 +6,11 @@ use function cli\{line, prompt};
 
 const ROUNDS = 3;
 
-function runGame(string $gameDescription, callable $gameLogic)
+function runGame(string $gameDescription, callable $getGameData)
 {
     $name = welcome($gameDescription);
     for ($i = 0; $i < ROUNDS; $i++) {
-        ['question' => $question, 'correctAnswer' => $correctAnswer] = $gameLogic();
+        ['question' => $question, 'correctAnswer' => $correctAnswer] = $getGameData();
         line("Question: {$question}");
         $answer = prompt("Your answer");
         if ($answer == $correctAnswer) {
