@@ -30,15 +30,13 @@ function generateQuestion()
 
 function calculate(array $parameters)
 {
-    $answer = '';
     [$firstNumber, $mathSign, $secondNumber] = $parameters;
     switch ($mathSign) {
         case '+':
-            return $answer = $firstNumber + $secondNumber;
+            return $firstNumber + $secondNumber;
         case '-':
-            return $answer = $firstNumber - $secondNumber;
+            return $firstNumber - $secondNumber;
         case '*':
-            return $answer = $firstNumber * $secondNumber;
+            return $firstNumber * $secondNumber;
     }
-    return $answer;
 }
