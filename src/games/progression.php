@@ -9,23 +9,23 @@ function run()
     $gameDescription = 'What number is missing in the progression?';
     $getGameData = function () {
         $logic = [];
-        [$removedElement, $numbers] = createProgressionArray();
-        $logic['question'] = implode(' ', $numbers);
-        $logic['correctAnswer'] = $removedElement;
+        [$hiddenValue, $progression] = generateProgressionWithHiddenValue();
+        $logic['question'] = implode(' ', $progression);
+        $logic['correctAnswer'] = $hiddenValue;
         return $logic;
     };
     runGame($gameDescription, $getGameData);
 }
 
-function createProgressionArray()
+function generateProgressionWithHiddenValue()
 {
     $start = rand(1, 50);
     $step = rand(1, 10);
     $steps = 10;
-    $numbers = range($start, $start + $step * $steps, $step);
-    $randomKey = array_rand($numbers);
-    $removedElement = $numbers[$randomKey];
-    $numbers[$randomKey] = '..';
+    $progression = range($start, $start + $step * $steps, $step);
+    $randomKey = array_rand($progression);
+    $hiddenValue = $progression[$randomKey];
+    $progression[$randomKey] = '..';
 
-    return [$removedElement, $numbers];
+    return [$hiddenValue, $progression];
 }
