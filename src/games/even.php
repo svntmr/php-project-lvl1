@@ -11,14 +11,13 @@ function run()
         $logic = [];
         $number = rand(1, 50);
         $logic['question'] = $number;
-        $logic['correctAnswer'] = checkIfNumberEven($number);
+        $logic['correctAnswer'] = isEven($number) ? 'yes' : 'no';
         return $logic;
     };
     runGame($gameDescription, $getGameData);
 }
 
-function checkIfNumberEven(int $number)
+function isEven(int $number)
 {
-    $isEven = $number % 2 === 0 ? 'yes' : 'no';
-    return $isEven;
+    return $number % 2 === 0;
 }
