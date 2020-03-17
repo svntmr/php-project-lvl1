@@ -8,7 +8,7 @@
         "bin/brain-prime"
     ],
     "description": "First Hexlet project named Brain Games",
-    "type": "library",
+    "type": "project",
     "authors": [
         {
             "name": "svn.tmr",
