@@ -4,12 +4,18 @@ namespace BrainGames\games\progression;
 
 use function BrainGames\engine\runGame;
 
+const PROGRESSION_LENGTH = 10;
+
 function run()
 {
     $gameDescription = 'What number is missing in the progression?';
     $getGameData = function () {
         $logic = [];
-        [$hiddenValue, $progression] = generateProgressionWithHiddenValue();
+        $startPoint = rand(1, 50);
+        $step = rand(1, 50);
+        $length = PROGRESSION_LENGTH;
+        $hiddenKey = rand(0, $length);
+        [$hiddenValue, $progression]  = generateProgressionWithHiddenValue($startPoint, $step, $length, $hiddenKey);
         $logic['question'] = implode(' ', $progression);
         $logic['correctAnswer'] = $hiddenValue;
         return $logic;
@@ -17,15 +23,10 @@ function run()
     runGame($gameDescription, $getGameData);
 }
 
-function generateProgressionWithHiddenValue()
+function generateProgressionWithHiddenValue(int $startPoint, int $step, int $length, int $hiddenKey)
 {
-    $start = rand(1, 50);
-    $step = rand(1, 10);
-    $steps = 10;
-    $progression = range($start, $start + $step * $steps, $step);
-    $randomKey = array_rand($progression);
-    $hiddenValue = $progression[$randomKey];
-    $progression[$randomKey] = '..';
-
+    $progression = range($startPoint, $startPoint + $step * $length, $step);
+    $hiddenValue = $progression[$hiddenKey];
+    $progression[$hiddenKey] = '..';
     return [$hiddenValue, $progression];
 }
