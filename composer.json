@@ -30,7 +30,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.2",
         "wp-cli/php-cli-tools": "@dev"
     },
     "require-dev": {
