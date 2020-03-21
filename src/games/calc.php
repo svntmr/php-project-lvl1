@@ -11,21 +11,16 @@ function run()
     $gameDescription = 'What is the result of the expression?';
     $getGameData = function () {
         $gameData = [];
-        $parameters = generateQuestion();
+        $firstNumber = rand(1, 50);
+        $secondNumber = rand(1, 50);
+        $randomMathSign = MATH_SIGNS[array_rand(MATH_SIGNS)];
+        $parameters = [$firstNumber, $randomMathSign, $secondNumber];
         $question = implode(' ', $parameters);
         $gameData['question'] = $question;
         $gameData['correctAnswer'] = calculate($parameters);
         return $gameData;
     };
     runGame($gameDescription, $getGameData);
-}
-
-function generateQuestion()
-{
-    $firstNumber = rand(1, 50);
-    $secondNumber = rand(1, 50);
-    $randomMathSign = MATH_SIGNS[array_rand(MATH_SIGNS)];
-    return [$firstNumber, $randomMathSign, $secondNumber];
 }
 
 function calculate(array $parameters)
