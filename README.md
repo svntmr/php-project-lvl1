@@ -1,13 +1,13 @@
 # Brain Games
 ![PHP Composer](https://github.com/svntmr/php-project-lvl1/workflows/PHP%20Composer/badge.svg?branch=master&event=push) [![Maintainability](https://api.codeclimate.com/v1/badges/0cb49ecb5cc457282e8a/maintainability)](https://codeclimate.com/github/svntmr/php-project-lvl1/maintainability)    
    
-#### First Hexlet.io PHP course project, pack of ~~fun~~ interesting games for terminal    
-#### Installation: 
+## First Hexlet.io PHP course project, pack of ~~fun~~ interesting games for terminal    
+## Installation: 
 `composer global require svntmr/brain-games:dev-master`
-#### How to run: 
+## How to run: 
 `brain-<gameName>`   
 You can find game list below 
-#### Description 
+## Description 
 All games last three rounds, in each round you will have some questions that you need to answer   
 If you answer all the questions correctly, games will congratulate you    
 If you make a mistake, games will say the right answer and cheer you up to make one more try   
