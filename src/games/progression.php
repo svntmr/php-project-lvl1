@@ -10,15 +10,15 @@ function run()
 {
     $gameDescription = 'What number is missing in the progression?';
     $getGameData = function () {
-        $logic = [];
+        $gameData = [];
         $startPoint = rand(1, 50);
         $step = rand(1, 50);
         $length = PROGRESSION_LENGTH;
         $hiddenKey = rand(0, $length);
         [$hiddenValue, $progression]  = generateProgressionWithHiddenValue($startPoint, $step, $length, $hiddenKey);
-        $logic['question'] = implode(' ', $progression);
-        $logic['correctAnswer'] = $hiddenValue;
-        return $logic;
+        $gameData['question'] = implode(' ', $progression);
+        $gameData['correctAnswer'] = $hiddenValue;
+        return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }

@@ -51,11 +51,11 @@ function run()
 {
     $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getGameData = function () {
-        $logic = [];
+        $gameData = [];
         $number = rand(0, 4000);
-        $logic['question'] = $number;
-        $logic['correctAnswer'] = checkIfNumberPrime($number);
-        return $logic;
+        $gameData['question'] = $number;
+        $gameData['correctAnswer'] = checkIfNumberPrime($number);
+        return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }

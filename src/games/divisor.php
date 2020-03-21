@@ -8,12 +8,12 @@ function run()
 {
     $gameDescription = 'Find the greatest common divisor of given numbers.';
     $getGameData = function () {
-        $logic = [];
+        $gameData = [];
         $firstNum = rand(1, 50);
         $secondNum = rand(1, 50);
-        $logic['question'] = "{$firstNum} {$secondNum}";
-        $logic['correctAnswer'] = gcd($firstNum, $secondNum);
-        return $logic;
+        $gameData['question'] = "{$firstNum} {$secondNum}";
+        $gameData['correctAnswer'] = gcd($firstNum, $secondNum);
+        return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }

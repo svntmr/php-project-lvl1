@@ -8,11 +8,11 @@ function run()
 {
     $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $getGameData = function () {
-        $logic = [];
+        $gameData = [];
         $number = rand(1, 50);
-        $logic['question'] = $number;
-        $logic['correctAnswer'] = isEven($number) ? 'yes' : 'no';
-        return $logic;
+        $gameData['question'] = $number;
+        $gameData['correctAnswer'] = isEven($number) ? 'yes' : 'no';
+        return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }

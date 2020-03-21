@@ -10,12 +10,12 @@ function run()
 {
     $gameDescription = 'What is the result of the expression?';
     $getGameData = function () {
-        $logic = [];
+        $gameData = [];
         $parameters = generateQuestion();
         $question = implode(' ', $parameters);
-        $logic['question'] = $question;
-        $logic['correctAnswer'] = calculate($parameters);
-        return $logic;
+        $gameData['question'] = $question;
+        $gameData['correctAnswer'] = calculate($parameters);
+        return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }
