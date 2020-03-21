@@ -15,7 +15,7 @@ function run()
         $step = rand(1, 50);
         $length = PROGRESSION_LENGTH;
         $hiddenKey = rand(0, $length);
-        [$hiddenValue, $progression]  = generateProgressionWithHiddenValue($startPoint, $step, $length, $hiddenKey);
+        [$hiddenValue, $progression]  = generateHiddenValueAndProgression($startPoint, $step, $length, $hiddenKey);
         $gameData['question'] = implode(' ', $progression);
         $gameData['correctAnswer'] = $hiddenValue;
         return $gameData;
@@ -23,7 +23,7 @@ function run()
     runGame($gameDescription, $getGameData);
 }
 
-function generateProgressionWithHiddenValue(int $startPoint, int $step, int $length, int $hiddenKey)
+function generateHiddenValueAndProgression(int $startPoint, int $step, int $length, int $hiddenKey)
 {
     $progression = range($startPoint, $startPoint + $step * $length, $step);
     $hiddenValue = $progression[$hiddenKey];
