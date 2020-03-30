@@ -28,7 +28,6 @@
             "src/games/prime.php"
         ]
     },
-    "minimum-stability": "dev",
     "require": {
         "wp-cli/php-cli-tools": "@dev"
     },
