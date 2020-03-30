@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\games\divisor;
+namespace BrainGames\games\gcd;
 
 use function BrainGames\engine\runGame;
 
