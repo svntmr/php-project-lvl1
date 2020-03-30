@@ -14,18 +14,16 @@ function run()
         $firstNumber = rand(1, 50);
         $secondNumber = rand(1, 50);
         $randomMathSign = MATH_SIGNS[array_rand(MATH_SIGNS)];
-        $parameters = [$firstNumber, $randomMathSign, $secondNumber];
-        $question = implode(' ', $parameters);
+        $question = "{$firstNumber} {$randomMathSign} {$secondNumber}";
         $gameData['question'] = $question;
-        $gameData['correctAnswer'] = calculate($parameters);
+        $gameData['correctAnswer'] = calculate($firstNumber, $randomMathSign, $secondNumber);
         return $gameData;
     };
     runGame($gameDescription, $getGameData);
 }
 
-function calculate(array $parameters)
+function calculate(int $firstNumber, string $mathSign, int $secondNumber)
 {
-    [$firstNumber, $mathSign, $secondNumber] = $parameters;
     switch ($mathSign) {
         case '+':
             return $firstNumber + $secondNumber;
